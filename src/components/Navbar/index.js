@@ -23,7 +23,7 @@ class NavbarComponent extends React.Component {
         <div className="navbar-container">
           <div className="navbar-title">
             <h1 className="mt-2">
-              <Link to="/#">{siteData.title}</Link>
+              <Link to="/">{siteData.title}</Link>
             </h1>
           </div>
           <nav>
