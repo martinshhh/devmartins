@@ -1,0 +1,99 @@
+header {
+	z-index: 1000;
+	font-weight: 400;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 50px;
+}
+
+header::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.navbar-container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.navbar-title {
+	float: left;
+	margin-top: auto;
+	margin-bottom: auto;
+	@include breakpoint(xs) {
+		float: none;
+		text-align: center;
+	}
+
+	a {
+		@include keyframes(color-change) {
+			0% { color: #b2b2b2; }
+			50% { color: #595959; }
+			100% { color: #b2b2b2; }
+			50% { color: #595959; }
+		}
+
+		&:hover {
+			@include animation('color-change 2s infinite')
+		}
+	}
+}
+
+nav {
+	float: right;
+	@include breakpoint(xs) {
+		width: 100%;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		@include breakpoint(xs) {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	li {
+		display: inline-block;
+		margin-left: 70px;
+		// margin-top: 5px;
+		padding-top: 15px;
+
+		position: relative;
+		@include breakpoint(xs) {
+			padding-top: 5px;
+			margin: 0;
+			margin-bottom: 5px;
+		}
+	}
+
+	a {
+		&:before {
+			content: '';
+			display: block;
+			height: 3px;
+			width: 100%;
+			background-color: #444;
+
+			position: absolute;
+			top: 10px;
+			width: 0%;
+
+			@include breakpoint(xs) {
+				top: initial;
+				bottom: 0;
+				height: 2px;
+			}
+
+			transition: all ease-in-out 250ms;
+		}
+
+		&:hover::before {
+			width: 100%;
+		}
+	}
+}

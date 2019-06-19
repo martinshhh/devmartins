@@ -1,0 +1,20 @@
+.remove-padding {
+    padding: 0;
+    overflow: hidden;
+}
+
+.main-container {
+    flex: auto;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    padding: 20px;
+    background-color: rgba(226, 222, 213, 0.6);
+    overflow: auto
+}
+
+.breadcrumb-container {
+    position: absolute;
+    top: 8rem;
+    left: 21%;
+    width: 100%;
+}

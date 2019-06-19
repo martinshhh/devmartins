@@ -1,0 +1,49 @@
+#writtens {
+  height: 100%;
+
+  .writtens-title {
+    h1 {
+      color: #878787
+    }
+  }
+
+  .posts-container {
+
+    ul {
+      list-style: none;
+      margin: 0
+   }
+
+    li {
+      display: flex;
+      padding: 10px;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: rgba(203, 196, 180, 0.5)
+      }
+    }
+    a {
+      color: #5A6037;
+      text-decoration: none;
+
+      h5 {
+        display: inline;
+        font-weight: 600
+
+      }
+
+      span {
+        font-weight: 300
+      }
+    }
+
+    .post-icon-container {
+      margin-right: 10px;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
