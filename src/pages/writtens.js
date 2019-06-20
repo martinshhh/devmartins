@@ -1,24 +1,30 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
+import PropTypes from 'prop-types'
+
 import Layout from '../components/PageLayout/index'
 
 const Template = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges
   return (
     <Layout location={location} crumbLabel="Writtens" page="writtens">
+      <Helmet title={'Martins - Writtens'} />
       <div className="default-page-title">
         <h1>Writtens</h1>
       </div>
       <hr></hr>
       <div className="posts-container">
         <ul>
-        {
-          posts.map((ele) => {
+          {posts.map(ele => {
             return (
               <Link to={ele.node.frontmatter.path} key={ele.node.id}>
                 <li>
                   <div className="post-icon-container">
-                    <img src="https://img.icons8.com/material/4ac144/256/user-male.png/30x30" alt="X"></img>
+                    <img
+                      src="https://img.icons8.com/material/4ac144/256/user-male.png/30x30"
+                      alt="X"
+                    ></img>
                   </div>
                   <div>
                     <h5>{ele.node.frontmatter.title}</h5>
@@ -29,8 +35,7 @@ const Template = ({ data, location }) => {
                 </li>
               </Link>
             )
-          })
-        }
+          })}
         </ul>
       </div>
     </Layout>
@@ -38,6 +43,11 @@ const Template = ({ data, location }) => {
 }
 
 export default Template
+
+Template.propTypes = {
+  data: PropTypes.object,
+  location: PropTypes.object,
+}
 
 export const postQuery = graphql`
   query writtensQuery {

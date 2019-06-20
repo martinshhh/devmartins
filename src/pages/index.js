@@ -1,14 +1,16 @@
 import React from 'react'
+import Helmet from 'react-helmet'
+import PropTypes from 'prop-types'
 
 import Layout from '../components/PageLayout/index'
 import IntroImageBox from '../components/IntroImageBox'
-import HomePostsList from '../components/HomePostsList';
+import HomePostsList from '../components/HomePostsList'
 
 const Template = ({ data }) => {
-  console.log('data', data);
-  const posts = data.allMarkdownRemark.edges;
+  const posts = data.allMarkdownRemark.edges
   return (
-    <Layout crumbLabel="Writtens" page="root">
+    <Layout page="root">
+      <Helmet title={'Martins - Home'} />
       <div className="welcome-container">
         <div className="welcome-text">
           <h1>Hello</h1>
@@ -18,15 +20,15 @@ const Template = ({ data }) => {
         <div className="sub-info-container-1">
           <h5>I'm Pedro Martins</h5>
           <p>
-             A small introduction about me. A small introduction about me.
-             A small introduction about me. A small introduction about me.
-             A small introduction about me. A small introduction about me. 
-             A small introduction about me. A small introduction about me.
-             A small introduction about me. A small introduction about me.
-             A small introduction about me. A small introduction about me. 
-             A small introduction about me. A small introduction about me. 
-             A small introduction about me. A small introduction about me.
-             A small introduction about me. A small introduction about me.
+            A small introduction about me. A small introduction about me. A
+            small introduction about me. A small introduction about me. A small
+            introduction about me. A small introduction about me. A small
+            introduction about me. A small introduction about me. A small
+            introduction about me. A small introduction about me. A small
+            introduction about me. A small introduction about me. A small
+            introduction about me. A small introduction about me. A small
+            introduction about me. A small introduction about me. A small
+            introduction about me. A small introduction about me.
           </p>
         </div>
         <div className="sub-info-container-2">
@@ -66,6 +68,10 @@ const Template = ({ data }) => {
 }
 
 export default Template
+
+Template.propTypes = {
+  data: PropTypes.object,
+}
 
 export const postQuery = graphql`
   query IndexQuery {

@@ -1,7 +1,8 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
+import PropTypes from 'prop-types'
 
-import Layout from "../components/PageLayout/index"
+import Layout from '../components/PageLayout/index'
 
 class NotFoundPage extends React.Component {
   render() {
@@ -17,6 +18,11 @@ class NotFoundPage extends React.Component {
 }
 
 export default NotFoundPage
+
+NotFoundPage.propTypes = {
+  data: PropTypes.object,
+  location: PropTypes.object,
+}
 
 export const pageQuery = graphql`
   query {

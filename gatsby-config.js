@@ -1,20 +1,8 @@
+const config = require('./config/site')
 /* eslint-disable quotes */
 module.exports = {
   siteMetadata: {
-    title: `Pedro Martins`,
-    rssMetadata: {
-      site_url: `https://devmartins.com/`,
-      title: `Pedro Martins`,
-      description: `The portfolio of Pedro Martins`,
-    },
-    author: `Pedro Martins`,
-    description: `The portfolio of Pedro Martins`,
-    siteUrl: `https://devmartins.com/`,
-    social: {
-      twitter: `xmaarf`,
-      instagram: `martins.jsx`,
-      youtube: `opedrom`,
-    },
+    ...config
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -65,19 +53,21 @@ module.exports = {
       },
     },
     `gatsby-plugin-feed`,
+    'gatsby-plugin-sitemap',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `Pedro Portfolio`,
-        short_name: `PedroMartins`,
-        start_url: `/`,
-        background_color: `#000000`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        name: config.title,
+        short_name: config.shortName,
+        description: config.description,
+        start_url: config.pathPrefix,
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
+        display: 'standalone',
+        icon: config.favicon,
       },
     },
-    `gatsby-plugin-offline`,
+    'gatsby-plugin-offline',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
