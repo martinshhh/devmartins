@@ -1,14 +1,19 @@
 /* eslint-disable quotes */
 module.exports = {
   siteMetadata: {
-    title: `Pedro`,
+    title: `Pedro Martins`,
+    rssMetadata: {
+      site_url: `https://devmartins.com/`,
+      title: `Pedro Martins`,
+      description: `The portfolio of Pedro Martins`,
+    },
     author: `Pedro Martins`,
     description: `The portfolio of Pedro Martins`,
-    siteUrl: `https://google.com/`,
+    siteUrl: `https://devmartins.com/`,
     social: {
       twitter: `xmaarf`,
-      instagram: 'martins.jsx',
-      youtube: 'opedrom',
+      instagram: `martins.jsx`,
+      youtube: `opedrom`,
     },
   },
   plugins: [
