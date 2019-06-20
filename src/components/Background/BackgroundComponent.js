@@ -23,12 +23,11 @@ const BackgroundComponent = (props) => (
        const imageData = data.desktop.childImageSharp.fluid
        let breadCrumb = null
        if (props.location && props.crumbLabel) {
-        breadCrumb = [
+        breadCrumb = 
           <Breadcrumb
           location={props.location}
           crumbLabel={props.crumbLabel}
         />
-          ]
        }
        return (
           <BackgroundImage Tag="section"

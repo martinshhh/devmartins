@@ -83,15 +83,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-breadcrumb`,
       options: {
-        options: {
-          defaultCrumb: {
-            location: {
-              state: { crumbClicked: true },
-              pathname: "/writtens",
-            },
-            crumbLabel: "Writtens",
-            crumbSeparator: " / ",
+        defaultCrumb: {
+          location: {
+            state: { crumbClicked: true },
+            pathname: "/writtens",
           },
+          crumbLabel: "Writtens",
+          crumbSeparator: " / ",
         },
       },
     },
