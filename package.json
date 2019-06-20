@@ -3,9 +3,9 @@
   "private": true,
   "description": "Pedro Martins blog",
   "version": "0.1.0",
-  "author": "Pedro Martins <dev.martins@gmail.com>",
+  "author": "Pedro Martins <dev.pedromartins@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/dvlprmartins/devmartins/issues"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",

@@ -8,7 +8,6 @@ import Navbar from '../Navbar/index'
 import '../../styles/main.scss'
 
 const Layout = (props) => {
-  console.log('props', props);
   return (
     <section id={props.page}>
       <Navbar />

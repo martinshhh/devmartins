@@ -18,17 +18,8 @@ const BackgroundComponent = (props) => (
       }
     `}
      render={data => {
-       console.log('props', props);
        // Set ImageData.
        const imageData = data.desktop.childImageSharp.fluid
-       let breadCrumb = null
-       if (props.location && props.crumbLabel) {
-        breadCrumb = 
-          <Breadcrumb
-          location={props.location}
-          crumbLabel={props.crumbLabel}
-        />
-       }
        return (
           <BackgroundImage Tag="section"
             className={props.className}
@@ -40,7 +31,12 @@ const BackgroundComponent = (props) => (
             }}
           >
             <div className="breadcrumb-container">
-              {breadCrumb}                           
+              {props.location && props.crumbLabel && (
+                <Breadcrumb
+                  location={props.location}
+                  crumbLabel={props.crumbLabel}
+                />
+              )}                
             </div>
             <div className="container main-container">
               {props.children}
