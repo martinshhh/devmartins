@@ -14,14 +14,18 @@ const Layout = props => {
       <BackgroundComponent
         location={props.location}
         crumbLabel={props.crumbLabel}
-        children={props.children}
-      />
+      >
+        {props.children}
+      </BackgroundComponent>
     </section>
   )
 }
 
-Layout.prototypes = {
-  props: PropTypes.object,
+Layout.propTypes = {
+  location: PropTypes.object,
+  children: PropTypes.object,
+  crumbLabel: PropTypes.string,
+  page: PropTypes.string,
 }
 
 export default Layout

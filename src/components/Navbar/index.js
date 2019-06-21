@@ -1,20 +1,20 @@
-import React from 'react';
-import { Link, StaticQuery, graphql } from "gatsby"
+import React from 'react'
+import { Link, StaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
 class NavbarComponent extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.toggle = this.toggle.bind(this);
+    this.toggle = this.toggle.bind(this)
     this.state = {
-      isOpen: false
-    };
+      isOpen: false,
+    }
   }
   toggle() {
     this.setState({
-      isOpen: !this.state.isOpen
-    });
+      isOpen: !this.state.isOpen,
+    })
   }
   render() {
     const siteData = this.props.siteData.site.siteMetadata
@@ -28,9 +28,25 @@ class NavbarComponent extends React.Component {
           </div>
           <nav>
             <ul>
-              <li><Link activeClassName="active-link" to="/about">Who am i</Link></li>
-              <li><Link partiallyActive={true} activeClassName="active-link" to="/writtens">Writtens</Link></li>
-              <li><Link activeClassName="active-link" to="/#">Contact me</Link></li>
+              <li>
+                <Link activeClassName="active-link" to="/about">
+                  Who am i
+                </Link>
+              </li>
+              <li>
+                <Link
+                  partiallyActive={true}
+                  activeClassName="active-link"
+                  to="/writtens"
+                >
+                  Writtens
+                </Link>
+              </li>
+              <li>
+                <Link activeClassName="active-link" to="/#">
+                  Contact me
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>
@@ -39,6 +55,7 @@ class NavbarComponent extends React.Component {
   }
 }
 
+// eslint-disable-next-line react/display-name
 export default props => (
   <StaticQuery
     query={graphql`
@@ -50,9 +67,9 @@ export default props => (
         }
       }
     `}
-    render={(data) => <NavbarComponent siteData={data} {...props} />}
+    render={data => <NavbarComponent siteData={data} {...props} />}
   />
-);
+)
 
 NavbarComponent.propTypes = {
   siteData: PropTypes.shape({

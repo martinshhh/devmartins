@@ -1,8 +1,8 @@
-import React from "react"
+import React from 'react'
 import PropTypes from 'prop-types'
-import Img from "gatsby-image"
+import Img from 'gatsby-image'
 
-const IntroImageBox = (props) => {
+const IntroImageBox = props => {
   return (
     <div className="image-container">
       <Img
@@ -20,7 +20,16 @@ const IntroImageBox = (props) => {
 }
 
 IntroImageBox.prototypes = {
-  props: PropTypes.object
+  props: PropTypes.object,
+}
+
+IntroImageBox.propTypes = {
+  image: PropTypes.object,
+  fit: PropTypes.string,
+  position: PropTypes.string,
+  alt: PropTypes.string,
+  title: PropTypes.string,
+  subTitle: PropTypes.string,
 }
 
 export default IntroImageBox

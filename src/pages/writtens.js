@@ -17,6 +17,7 @@ const Template = ({ data, location }) => {
       <div className="posts-container">
         <ul>
           {posts.map(ele => {
+            console.log('ele', ele.node.frontmatter)
             return (
               <Link to={ele.node.frontmatter.path} key={ele.node.id}>
                 <li>
