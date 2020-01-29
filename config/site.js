@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: '/',
   title: 'Pedro Martins', // Site Title
   titleAlt: 'Pedro Martins', // Title for JSONLD
-  description: 'A blog of Pedro Martins made with Gatsby',
+  description: 'A blog about web development by Pedro Martins',
   url: 'https://devmartins.com', // Site domain without trailing slash
   siteUrl: 'https://devmartins.com', // url + pathPrefix
   siteLanguage: 'en', // Language Tag on <html> element

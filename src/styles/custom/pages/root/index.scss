@@ -1,5 +1,6 @@
 #root {
   height: 100%;
+  // padding-bottom: 20px;
 
   .welcome-container {
     display: table;
@@ -22,16 +23,18 @@
   }
   
   .info-container {
-    display: flex;
-    flex-direction: row;
     .sub-info-container-1 {
       // display: flex;
-      flex: 1;
-      justify-content: flex-start
+      flex: 1.5;
+      justify-content: flex-start;
+
+      .intro-text {
+        text-align: justify
+      }
     }
     .sub-info-container-2 {
       display: flex;
-      flex: 1;
+      flex: 2;
       align-items: center;
       padding-left: 20px;
       flex-direction: column
@@ -40,19 +43,18 @@
     .image-container {
       display: flex;
       flex-direction: row;
-      align-items: center;
-      width: 300px;
-      margin-bottom: 20px;
+      width: 200px;
+      margin-bottom: 10px;
       padding: 10px;
       background-color: #ffffff;
       border-radius: 10px;
-
+      
       -webkit-box-shadow: 2px 6px 15px 3px rgba(0,0,0,0.12);
       -moz-box-shadow: 2px 6px 15px 3px rgba(0,0,0,0.12);
       box-shadow: 2px 6px 15px 3px rgba(0,0,0,0.12);
 
       .image-title {
-        margin-left: 20px
+        margin-left: 10px
       }
 
       h4 h3 {
@@ -60,43 +62,5 @@
         margin: 0;
       }
     }
-  }
-
-  .posts-container {
-    ul {
-      list-style: none
-   }
-
-    .lists-container {
-      display: flex;
-      flex-direction: row
-    }
-
-    .left-side-list {
-      flex: 1;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-    .right-side-list {
-      flex: 1;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-
-   .post-container {
-     display: flex;
-     align-items: center;
-     padding-left: 20px;
-     height: 37px;
-     background-color: #ffffff;
-     border-radius: 5px;
-
-     -webkit-box-shadow: 2px 6px 15px 3px rgba(0,0,0,0.12);
-     -moz-box-shadow: 2px 6px 15px 3px rgba(0,0,0,0.12);
-     box-shadow: 2px 6px 15px 3px rgba(0,0,0,0.12);
-     &:hover {
-       background-color: #ebebeb
-     }
-   }
   }
 }

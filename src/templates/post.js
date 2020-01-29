@@ -8,7 +8,13 @@ import SEO from '../components/SEO'
 export default function Template({ data, location }) {
   const { markdownRemark: post } = data
   return (
-    <Layout location={location} crumbLabel={post.frontmatter.title} page="post">
+    <Layout
+      location={location}
+      crumbLabel={post.frontmatter.title}
+      page="post"
+      title={post.frontmatter.title}
+      titleMainClass="default-page-title"
+    >
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt || ' '}
@@ -17,9 +23,6 @@ export default function Template({ data, location }) {
         article
       />
       <Helmet title={'Martins - ' + post.frontmatter.title} />
-      <div className="default-page-title">
-        <h1>{post.frontmatter.title}</h1>
-      </div>
       <hr></hr>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>

@@ -12,8 +12,9 @@ const IntroImageBox = props => {
         alt={props.alt}
       />
       <div className="image-title">
-        <h4>{props.title}</h4>
-        <h5>{props.subTitle}</h5>
+        <span>{props.title}</span>
+        <span> </span>
+        <span>{props.subTitle}</span>
       </div>
     </div>
   )

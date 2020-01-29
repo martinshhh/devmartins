@@ -9,9 +9,12 @@ import '../../styles/main.scss'
 
 const Layout = props => {
   return (
-    <section id={props.page}>
+    <section className="theme-light" id={props.page}>
       <Navbar />
       <BackgroundComponent
+        title={props.title}
+        titleMainClass={props.titleMainClass}
+        titleSubClass={props.titleSubClass}
         location={props.location}
         crumbLabel={props.crumbLabel}
       >
@@ -23,9 +26,12 @@ const Layout = props => {
 
 Layout.propTypes = {
   location: PropTypes.object,
-  children: PropTypes.object,
+  children: PropTypes.array,
   crumbLabel: PropTypes.string,
   page: PropTypes.string,
+  title: PropTypes.string,
+  titleMainClass: PropTypes.string,
+  titleSubClass: PropTypes.string,
 }
 
 export default Layout

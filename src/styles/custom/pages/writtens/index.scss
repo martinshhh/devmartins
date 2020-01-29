@@ -3,7 +3,9 @@
 
   .writtens-title {
     h1 {
-      color: #878787
+      @include themify($themes) {
+        color: themed('black');  
+      }
     }
   }
 
@@ -18,13 +20,17 @@
       display: flex;
       padding: 10px;
       border-radius: 5px;
+      color: $black;
+      background-color: $bg-opacity-blue;
 
       &:hover {
-        background-color: rgba(203, 196, 180, 0.5)
+        background-color: 	rgba(255,255,255, 0.8);
       }
     }
     a {
-      color: #5A6037;
+      @include themify($themes) {
+        color: themed('white');  
+      }
       text-decoration: none;
 
       h5 {
@@ -44,6 +50,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    .post-title {
+      @include themify($themes) {
+        color: themed('white');  
+      }
     }
   }
 }

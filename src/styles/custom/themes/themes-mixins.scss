@@ -1,0 +1,29 @@
+////
+/// Themes mixins
+/// @group Themes
+/// @author Pedro Martins
+////
+
+// themify iterates all over the created themesa nd outputs
+// what was wrapped inside it with a .theme-#{segment} class selector,
+// it defined a global SASS map named $themed-map which contains our
+// colors, sizes, fonts...
+// After the output the map is set to null so it can't be accessed from
+// anywhere but in the mixin content.
+
+@mixin themify($themes: $themes) {
+  @each $theme, $map in $themes {
+
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+
+      @content;
+      $theme-map: null !global;
+    }
+  
+  }
+}

@@ -28,12 +28,12 @@ class NavbarComponent extends React.Component {
           </div>
           <nav>
             <ul>
-              <li>
+              <li className="mx-1">
                 <Link activeClassName="active-link" to="/about">
                   Who am i
                 </Link>
               </li>
-              <li>
+              <li className="mx-1">
                 <Link
                   partiallyActive={true}
                   activeClassName="active-link"
@@ -42,8 +42,8 @@ class NavbarComponent extends React.Component {
                   Writtens
                 </Link>
               </li>
-              <li>
-                <Link activeClassName="active-link" to="/#">
+              <li className="mx-1">
+                <Link activeClassName="active-link" to="/contact">
                   Contact me
                 </Link>
               </li>

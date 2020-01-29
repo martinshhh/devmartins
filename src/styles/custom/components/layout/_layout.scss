@@ -4,17 +4,17 @@
 }
 
 .main-container {
-    flex: auto;
+    // flex: auto;
     margin-top: 10rem;
-    margin-bottom: 10rem;
+    // margin-bottom: 10rem;
     padding: 20px;
-    background-color: rgba(226, 222, 213, 0.6);
+    background-color: transparent;
     overflow: auto
 }
 
 .breadcrumb-container {
-    position: absolute;
-    top: 8rem;
-    left: 21%;
-    width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 5rem;
+    right: 43rem;
 }

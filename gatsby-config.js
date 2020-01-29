@@ -2,7 +2,7 @@ const config = require('./config/site')
 /* eslint-disable quotes */
 module.exports = {
   siteMetadata: {
-    ...config
+    ...config,
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -80,13 +80,32 @@ module.exports = {
       options: {
         defaultCrumb: {
           location: {
-            state: { crumbClicked: true },
-            pathname: "/writtens",
+            state: { crumbClicked: false },
+            pathname: '/writtens',
           },
-          crumbLabel: "Writtens",
-          crumbSeparator: " / ",
+          crumbLabel: 'Writtens',
+          crumbSeparator: '     ',
+          crumbStyle: {
+            color: '#878787',
+            fontSize: '2.5rem',
+            textTransform: 'none',
+          },
         },
       },
-    }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Pedro Martins`,
+        short_name: `devmartins`,
+        description: `A blog about web development by Pedro Martins`,
+        start_url: `http://www.devmartins.com/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `static/images/flame.png`, // This path is relative to the root of the site.
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
-};
+}

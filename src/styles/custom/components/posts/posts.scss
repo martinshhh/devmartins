@@ -1,0 +1,60 @@
+#root {
+  .posts-container {
+    ul {
+      list-style: none
+   }
+
+   .post-container {
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     padding-left: 20px;
+     padding-top: 5px;
+     height: 60px;
+     background-color: #ffffff;
+     border-radius: 5px;
+
+     -webkit-box-shadow: 2px 6px 15px 3px rgba(0,0,0,0.12);
+     -moz-box-shadow: 2px 6px 15px 3px rgba(0,0,0,0.12);
+     box-shadow: 2px 6px 15px 3px rgba(0,0,0,0.12);
+     &:hover {
+       -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+       box-shadow: none;
+     }
+   }
+
+   .posts-list {
+     width: 100%
+   }
+  }
+
+  .title-text {
+    font-weight: 700;
+  }
+
+  .description-text {
+    text-transform: none;
+  }
+
+  .more-writtens {
+    a {
+      text-transform: none;
+      color: gray;
+      text-decoration-line: underline;
+    }
+  }
+
+  //TODO Fix animation
+  .goto-icon:hover {
+    @include animation("goto 1s steps(15) 1s 1 normal both");
+    @include keyframes(goto) {
+      from {
+        margin-left: 0px;
+      }
+      to {
+        margin-left: 75px;
+      }
+    }
+  }
+}

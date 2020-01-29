@@ -1,0 +1,12 @@
+////
+/// Themes functions
+/// @group Themes
+/// @author Pedro Martins
+////
+
+// themed is meant to be used inside the themify mixin wrapped content,
+// it simplifies the access to the $theme-map
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
